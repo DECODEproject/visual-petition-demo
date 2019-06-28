@@ -1,19 +1,19 @@
-
 import { createContext, CryptoFactory } from 'sawtooth-sdk/signing'
 import { createHash } from 'crypto'
 import { protobuf } from 'sawtooth-sdk'
-const cbor = require('cbor')
+import cbor from 'cbor'
 
-export const createZenroomBatch = (payload) => {
-  const context = createContext('secp256k1')
-  const privateKey = context.newRandomPrivateKey()
-  const signer = new CryptoFactory(context).newSigner(privateKey)
+const context = createContext('secp256k1')
+const privateKey = context.newRandomPrivateKey()
+const signer = new CryptoFactory(context).newSigner(privateKey)
+
+export const createZenroomTransaction = (payload, inputs=['879e1d'], outputs=['879e1d']) => {
   const payloadBytes = cbor.encode(payload)
   const transactionHeaderBytes = protobuf.TransactionHeader.encode({
     familyName: 'zenroom',
     familyVersion: '1.0',
-    inputs: ['879e1d'],
-    outputs: ['879e1d'],
+    inputs: inputs,
+    outputs: outputs,
     signerPublicKey: signer.getPublicKey().asHex(),
     batcherPublicKey: signer.getPublicKey().asHex(),
     dependencies: [],
@@ -27,6 +27,11 @@ export const createZenroomBatch = (payload) => {
     payload: payloadBytes
   })
 
+  return transaction
+}
+
+export const createZenroomBatch = (payload) => {
+  const transaction = createZenroomTransaction(payload)
   const transactions = [transaction]
   const batchHeaderBytes = protobuf.BatchHeader.encode({
     signerPublicKey: signer.getPublicKey().asHex(),
