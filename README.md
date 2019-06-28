@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">
-  visual-petition-demo</br>
+  visual-petition-demo</br></br>
   <sub>:postbox: Step by step DDDC petition signing & saving zencode smart contracts over sawtooth hyperledger</sub>
 </h1>
   
@@ -17,8 +17,6 @@
     <img src="https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%9D%A4%20by-Dyne.org-blue.svg" alt="Dyne.org">
   </a>
 </p>
-
-<br><br>
 
 <h4 align="center">
   <a href="#video_game-quick-start">:video_game: Quick start</a>
@@ -33,7 +31,7 @@
 </h4>
 
 
-A:construction: Zenroom is a software part of the [DECODE project](https://decodeproject.eu) about data-ownership and [technological sovereignty](https://www.youtube.com/watch?v=RvBRbwBm_nQ). Our effort is that of improving people's awareness of how their data is processed by algorithms, as well facilitate the work of developers to create along [privacy by design principles](https://decodeproject.eu/publications/privacy-design-strategies-decode-architecture) using algorithms that can be deployed in any situation without any change.
+:construction: Zenroom is a software part of the [DECODE project](https://decodeproject.eu) about data-ownership and [technological sovereignty](https://www.youtube.com/watch?v=RvBRbwBm_nQ). Our effort is that of improving people's awareness of how their data is processed by algorithms, as well facilitate the work of developers to create along [privacy by design principles](https://decodeproject.eu/publications/privacy-design-strategies-decode-architecture) using algorithms that can be deployed in any situation without any change.
 
 
 <details>
