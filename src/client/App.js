@@ -2,6 +2,7 @@ import React from 'react'
 import Content from './components/content'
 import {Grommet} from 'grommet'
 
+
 const theme = {
   global: {
     font: {
@@ -12,11 +13,7 @@ const theme = {
   }
 }
 
-
-
 const App = function () {
-
-
   return (
     <Grommet theme={theme} full>
       <Content />

@@ -21,6 +21,8 @@
 <h4 align="center">
   <a href="#video_game-quick-start">:video_game: Quick start</a>
   <span> • </span>
+  <a href="#wrench-configuration">:wrench: Configuration</a>
+  <span> • </span>
   <a href="#heart_eyes-acknowledgements">:heart_eyes: Acknowledgements</a>
   <span> • </span>
   <a href="#globe_with_meridians-links">:globe_with_meridians: Links</a>
@@ -38,6 +40,7 @@
  <summary><strong>:triangular_flag_on_post: Table of Contents</strong> (click to expand)</summary>
 
 * [Quick start](#video_game-quick-start)
+* [Configuration](#wrench-configuration)
 * [Acknowledgements](#heart_eyes-acknowledgements)
 * [Links](#globe_with_meridians-links)
 * [Contributing](#busts_in_silhouette-contributing)
@@ -51,6 +54,18 @@ To start using visual-petition-demo just
 ```bash
 npm run dev
 ```
+
+***
+## :wrench: Configuration
+
+To setup the address of the sawtooth server you need to set two enviroment variable or a `.env` file equally readed.
+Priority is on system defined env variables (.env are overwritten)
+
+| name | default |
+| ---- | ------- |
+| **SAWTOOTH_SERVER** | `localhost` | 
+| **SAWTOOTH_PORT** | `8090` | 
+
 
 ***
 ## :heart_eyes: Acknowledgements

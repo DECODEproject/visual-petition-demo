@@ -1,9 +1,11 @@
 import express from 'express'
 import request from 'request'
+import dotenv from 'dotenv'
 
 import { createZenroomBatch } from '../lib/sawtooth'
 
 const app = express()
+dotenv.config()
 
 app.use(express.json())
 app.use(express.static('dist'))
@@ -23,7 +25,7 @@ app.post('/api/create_petition', (req, res) => {
   const batchListBytes = createZenroomBatch(payload)
 
   request.post({
-    url: 'http://localhost:8090/batches',
+    url: `http://${process.env.SAWTOOTH_SERVER || "localhost"}:${process.env.SAWTOOTH_PORT || 8090}/batches`,
     body: batchListBytes,
     headers: { 'Content-Type': 'application/octet-stream' }
   }, (err, response) => {
