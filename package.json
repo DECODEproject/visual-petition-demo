@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "npm run build && node src/server/index.js",
-    "client": "webpack-dev-server --display=minimal --mode development --devtool inline-source-map --hot",
+    "client": "webpack-dev-server --display=minimal --mode development --devtool inline-source-map --hot --host 127.0.0.1",
     "server": "nodemon -r esm src/server/index.js",
     "lint": "standard --verbose | snazzy",
     "lint-fix": "standard --fix --verbose | snazzy",
